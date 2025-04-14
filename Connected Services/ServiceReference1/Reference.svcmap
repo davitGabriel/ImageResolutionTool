@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ec61b64b-7d66-4822-a35c-21ae9f485f8b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>true</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.10.2.137/CSRest/WCFServiceCertna.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFServiceCertna.disco" MetadataType="Disco" ID="92e759d9-8c7d-4e3e-913a-e4fbe1acb2d1" SourceId="1" SourceUrl="http://10.10.2.137/CSRest/WCFServiceCertna.svc?disco" />
+    <MetadataFile FileName="WCFServiceCertna.wsdl" MetadataType="Wsdl" ID="868fda38-2783-48d1-9835-5a5a29051c54" SourceId="1" SourceUrl="http://10.10.2.137/CSRest/WCFServiceCertna.svc?wsdl" />
+    <MetadataFile FileName="WCFServiceCertna.xsd" MetadataType="Schema" ID="f9b4e998-b9c9-4f99-924c-59862ae130a2" SourceId="1" SourceUrl="http://10.10.2.137/CSRest/WCFServiceCertna.svc?xsd=xsd3" />
+    <MetadataFile FileName="WCFServiceCertna1.xsd" MetadataType="Schema" ID="083bd627-fc62-476a-b4e7-b354de88a182" SourceId="1" SourceUrl="http://10.10.2.137/CSRest/WCFServiceCertna.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCFServiceCertna2.xsd" MetadataType="Schema" ID="11355722-d6f5-46e8-bdf9-e6759e55f656" SourceId="1" SourceUrl="http://10.10.2.137/CSRest/WCFServiceCertna.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCFServiceCertna3.xsd" MetadataType="Schema" ID="37d971ba-03b0-4bb1-a616-1b68286fbe38" SourceId="1" SourceUrl="http://10.10.2.137/CSRest/WCFServiceCertna.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

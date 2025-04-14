@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.10.2.137/CSRest/WCFServiceCertna.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:import schemaLocation="http://10.10.2.137/CSRest/WCFServiceCertna.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfDocumentNumbersBlockingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentNumbersBlockingInfo" nillable="true" type="tns:DocumentNumbersBlockingInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentNumbersBlockingInfo" nillable="true" type="tns:ArrayOfDocumentNumbersBlockingInfo" />
+  <xs:complexType name="DocumentNumbersBlockingInfo">
+    <xs:sequence>
+      <xs:element name="_documentNumber" nillable="true" type="xs:string" />
+      <xs:element name="_idDocument" type="xs:long" />
+      <xs:element name="_sequenceNumber" type="xs:int" />
+      <xs:element name="_titleCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentNumbersBlockingInfo" nillable="true" type="tns:DocumentNumbersBlockingInfo" />
+  <xs:complexType name="ArrayOfDocumentNumbersMetroBlockingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentNumbersMetroBlockingInfo" nillable="true" type="tns:DocumentNumbersMetroBlockingInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentNumbersMetroBlockingInfo" nillable="true" type="tns:ArrayOfDocumentNumbersMetroBlockingInfo" />
+  <xs:complexType name="DocumentNumbersMetroBlockingInfo">
+    <xs:sequence>
+      <xs:element name="_documentId" nillable="true" type="xs:string" />
+      <xs:element name="_documentNumber" nillable="true" type="xs:string" />
+      <xs:element name="_idDocument" type="xs:long" />
+      <xs:element name="_sequenceNumber" type="xs:int" />
+      <xs:element name="_titleCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentNumbersMetroBlockingInfo" nillable="true" type="tns:DocumentNumbersMetroBlockingInfo" />
+  <xs:complexType name="PackageForCashiering">
+    <xs:sequence>
+      <xs:element name="_companyId" nillable="true" type="xs:string" />
+      <xs:element name="_documents" nillable="true" type="tns:ArrayOfDocumentForCashiering" />
+      <xs:element name="_id" type="xs:long" />
+      <xs:element name="_is8AM" type="xs:boolean" />
+      <xs:element name="_recieptNumber" nillable="true" type="xs:string" />
+      <xs:element name="_recordTime" type="xs:dateTime" />
+      <xs:element name="_secureId" type="xs:long" />
+      <xs:element name="_userId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PackageForCashiering" nillable="true" type="tns:PackageForCashiering" />
+  <xs:complexType name="ArrayOfDocumentForCashiering">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentForCashiering" nillable="true" type="tns:DocumentForCashiering" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentForCashiering" nillable="true" type="tns:ArrayOfDocumentForCashiering" />
+  <xs:complexType name="DocumentForCashiering">
+    <xs:sequence>
+      <xs:element name="_additionalNotes" nillable="true" type="xs:string" />
+      <xs:element name="_book" nillable="true" type="xs:string" />
+      <xs:element name="_bookPageNumber" type="xs:int" />
+      <xs:element name="_businessDateTime" type="xs:dateTime" />
+      <xs:element name="_countyName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Collections.Generic" name="_documentTitleCrossReferance" nillable="true" type="q1:ArrayOfKeyValuePairOfstringint" />
+      <xs:element name="_fees" nillable="true" type="tns:ArrayOfFee" />
+      <xs:element name="_firstTitleId" type="xs:long" />
+      <xs:element name="_id" type="xs:long" />
+      <xs:element name="_idCashierForm" nillable="true" type="xs:string" />
+      <xs:element name="_labels" nillable="true" type="tns:ArrayOfRealLabel" />
+      <xs:element name="_number" nillable="true" type="xs:string" />
+      <xs:element name="_recordingDateTime" type="xs:dateTime" />
+      <xs:element name="_titleXmls" nillable="true" type="tns:TitlesXml" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentForCashiering" nillable="true" type="tns:DocumentForCashiering" />
+  <xs:complexType name="ArrayOfFee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Fee" nillable="true" type="tns:Fee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFee" nillable="true" type="tns:ArrayOfFee" />
+  <xs:complexType name="Fee">
+    <xs:sequence>
+      <xs:element name="_amount" type="xs:double" />
+      <xs:element name="_code" nillable="true" type="xs:string" />
+      <xs:element name="_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Fee" nillable="true" type="tns:Fee" />
+  <xs:complexType name="ArrayOfRealLabel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RealLabel" nillable="true" type="tns:RealLabel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRealLabel" nillable="true" type="tns:ArrayOfRealLabel" />
+  <xs:complexType name="RealLabel">
+    <xs:sequence>
+      <xs:element name="_cashierId" nillable="true" type="xs:string" />
+      <xs:element name="_id" type="xs:long" />
+      <xs:element name="_label" nillable="true" type="xs:string" />
+      <xs:element name="_name" nillable="true" type="xs:string" />
+      <xs:element name="_pageCategory" type="tns:PageCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RealLabel" nillable="true" type="tns:RealLabel" />
+  <xs:simpleType name="PageCategory">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Record" />
+      <xs:enumeration value="PCOR" />
+      <xs:enumeration value="NonDisclosure" />
+      <xs:enumeration value="Trash" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PageCategory" nillable="true" type="tns:PageCategory" />
+  <xs:complexType name="TitlesXml">
+    <xs:sequence>
+      <xs:element name="_titleXml" nillable="true" type="tns:ArrayOfTitleDataAndSchema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TitlesXml" nillable="true" type="tns:TitlesXml" />
+  <xs:complexType name="ArrayOfTitleDataAndSchema">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TitleDataAndSchema" nillable="true" type="tns:TitleDataAndSchema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTitleDataAndSchema" nillable="true" type="tns:ArrayOfTitleDataAndSchema" />
+  <xs:complexType name="TitleDataAndSchema">
+    <xs:sequence>
+      <xs:element name="_titleData" nillable="true" type="xs:string" />
+      <xs:element name="_titleId" type="xs:long" />
+      <xs:element name="_titleSchema" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TitleDataAndSchema" nillable="true" type="tns:TitleDataAndSchema" />
+  <xs:complexType name="ArrayOfCashierPhysPayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashierPhysPayment" nillable="true" type="tns:CashierPhysPayment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCashierPhysPayment" nillable="true" type="tns:ArrayOfCashierPhysPayment" />
+  <xs:complexType name="CashierPhysPayment">
+    <xs:sequence>
+      <xs:element name="_dateCheck" type="xs:dateTime" />
+      <xs:element name="_dblAmount" type="xs:double" />
+      <xs:element name="_dblChange" type="xs:double" />
+      <xs:element name="_isEscrow" type="xs:byte" />
+      <xs:element name="_paymentNo" nillable="true" type="xs:string" />
+      <xs:element name="_tenderType" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashierPhysPayment" nillable="true" type="tns:CashierPhysPayment" />
+  <xs:complexType name="ArrayOfCashierCompanyInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashierCompanyInfo" nillable="true" type="tns:CashierCompanyInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCashierCompanyInfo" nillable="true" type="tns:ArrayOfCashierCompanyInfo" />
+  <xs:complexType name="CashierCompanyInfo">
+    <xs:sequence>
+      <xs:element name="_address" nillable="true" type="xs:string" />
+      <xs:element name="_address2" nillable="true" type="xs:string" />
+      <xs:element name="_billingSchedule" type="xs:unsignedByte" />
+      <xs:element name="_certnaIdentifier" type="xs:int" />
+      <xs:element name="_city" nillable="true" type="xs:string" />
+      <xs:element name="_contact" nillable="true" type="xs:string" />
+      <xs:element name="_customerId" type="xs:int" />
+      <xs:element name="_eMail" nillable="true" type="xs:string" />
+      <xs:element name="_fax" nillable="true" type="xs:string" />
+      <xs:element name="_id" nillable="true" type="xs:string" />
+      <xs:element name="_isActive" type="xs:unsignedByte" />
+      <xs:element name="_isEscrow" type="xs:unsignedByte" />
+      <xs:element name="_isG2GSubmitter" type="xs:unsignedByte" />
+      <xs:element name="_isSubmittingParty" type="xs:unsignedByte" />
+      <xs:element name="_minEscrowBal" type="xs:double" />
+      <xs:element name="_name" nillable="true" type="xs:string" />
+      <xs:element name="_phone" nillable="true" type="xs:string" />
+      <xs:element name="_secureId" type="xs:int" />
+      <xs:element name="_state" nillable="true" type="xs:string" />
+      <xs:element name="_submittingPartyID" type="xs:int" />
+      <xs:element name="_zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashierCompanyInfo" nillable="true" type="tns:CashierCompanyInfo" />
+  <xs:complexType name="ArrayOfCashierUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashierUserInfo" nillable="true" type="tns:CashierUserInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCashierUserInfo" nillable="true" type="tns:ArrayOfCashierUserInfo" />
+  <xs:complexType name="CashierUserInfo">
+    <xs:sequence>
+      <xs:element name="_id" nillable="true" type="xs:string" />
+      <xs:element name="_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashierUserInfo" nillable="true" type="tns:CashierUserInfo" />
+  <xs:complexType name="ArrayOfCashierWorkstationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashierWorkstationInfo" nillable="true" type="tns:CashierWorkstationInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCashierWorkstationInfo" nillable="true" type="tns:ArrayOfCashierWorkstationInfo" />
+  <xs:complexType name="CashierWorkstationInfo">
+    <xs:sequence>
+      <xs:element name="_id" nillable="true" type="xs:string" />
+      <xs:element name="_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashierWorkstationInfo" nillable="true" type="tns:CashierWorkstationInfo" />
+  <xs:complexType name="ArrayOfCashierTitleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashierTitleInfo" nillable="true" type="tns:CashierTitleInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCashierTitleInfo" nillable="true" type="tns:ArrayOfCashierTitleInfo" />
+  <xs:complexType name="CashierTitleInfo">
+    <xs:sequence>
+      <xs:element name="_id" nillable="true" type="xs:string" />
+      <xs:element name="_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashierTitleInfo" nillable="true" type="tns:CashierTitleInfo" />
+  <xs:complexType name="ArrayOfCashierLabelInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashierLabelInfo" nillable="true" type="tns:CashierLabelInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCashierLabelInfo" nillable="true" type="tns:ArrayOfCashierLabelInfo" />
+  <xs:complexType name="CashierLabelInfo">
+    <xs:sequence>
+      <xs:element name="_height" type="xs:int" />
+      <xs:element name="_id" nillable="true" type="xs:string" />
+      <xs:element name="_name" nillable="true" type="xs:string" />
+      <xs:element name="_width" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashierLabelInfo" nillable="true" type="tns:CashierLabelInfo" />
+  <xs:complexType name="ArrayOfCashierCityInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashierCityInfo" nillable="true" type="tns:CashierCityInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCashierCityInfo" nillable="true" type="tns:ArrayOfCashierCityInfo" />
+  <xs:complexType name="CashierCityInfo">
+    <xs:sequence>
+      <xs:element name="_code" nillable="true" type="xs:string" />
+      <xs:element name="_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashierCityInfo" nillable="true" type="tns:CashierCityInfo" />
+  <xs:complexType name="ArrayOfCashierPaymentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashierPaymentType" nillable="true" type="tns:CashierPaymentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCashierPaymentType" nillable="true" type="tns:ArrayOfCashierPaymentType" />
+  <xs:complexType name="CashierPaymentType">
+    <xs:sequence>
+      <xs:element name="_abbreviation" nillable="true" type="xs:string" />
+      <xs:element name="_description" nillable="true" type="xs:string" />
+      <xs:element name="_flags" type="xs:long" />
+      <xs:element name="_groupId" type="xs:unsignedByte" />
+      <xs:element name="_id" type="xs:short" />
+      <xs:element name="_shortChar" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashierPaymentType" nillable="true" type="tns:CashierPaymentType" />
+  <xs:complexType name="ArrayOfCashierTitleLabelInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashierTitleLabelInfo" nillable="true" type="tns:CashierTitleLabelInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCashierTitleLabelInfo" nillable="true" type="tns:ArrayOfCashierTitleLabelInfo" />
+  <xs:complexType name="CashierTitleLabelInfo">
+    <xs:sequence>
+      <xs:element name="_labelCode" nillable="true" type="xs:string" />
+      <xs:element name="_titleCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashierTitleLabelInfo" nillable="true" type="tns:CashierTitleLabelInfo" />
+</xs:schema>

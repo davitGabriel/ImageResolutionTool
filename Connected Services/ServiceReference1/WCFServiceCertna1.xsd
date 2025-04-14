@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.10.2.137/CSRest/WCFServiceCertna.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" />
+  <xs:element name="BlockDocumentIdsInCashiering">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="cashDocuments" nillable="true" type="q1:ArrayOfDocumentNumbersBlockingInfo" />
+        <xs:element minOccurs="0" name="cashUserCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cashCustomerCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BlockDocumentIdsInCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="cashDocuments" nillable="true" type="q2:ArrayOfDocumentNumbersBlockingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BlockDocumentIdsInCashieringForMetro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="cashDocuments" nillable="true" type="q3:ArrayOfDocumentNumbersMetroBlockingInfo" />
+        <xs:element minOccurs="0" name="cashUserCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cashCustomerCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BlockDocumentIdsInCashieringForMetroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="cashDocuments" nillable="true" type="q4:ArrayOfDocumentNumbersMetroBlockingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrepareAndSendPackageToCashiering">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cashIdCustomer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secureSubmitterId" type="xs:int" />
+        <xs:element minOccurs="0" name="cashIdUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cashWorkstationName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="package" nillable="true" type="q5:PackageForCashiering" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrepareAndSendPackageToCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="package" nillable="true" type="q6:PackageForCashiering" />
+        <xs:element minOccurs="0" name="wasRecordedBefore" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrepareAndSendMetroPackageToCashiering">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cashIdCustomer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cashIdUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cashWorkstationName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="cashPayments" nillable="true" type="q7:ArrayOfCashierPhysPayment" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="package" nillable="true" type="q8:PackageForCashiering" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrepareAndSendMetroPackageToCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="package" nillable="true" type="q9:PackageForCashiering" />
+        <xs:element minOccurs="0" name="wasRecordedBefore" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrepareAndSendVitalDocsPackageToCashiering">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aNIdCustomer" type="xs:int" />
+        <xs:element minOccurs="0" name="cashIdUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cashWorkstationName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="cashPayments" nillable="true" type="q10:ArrayOfCashierPhysPayment" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="package" nillable="true" type="q11:PackageForCashiering" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrepareAndSendVitalDocsPackageToCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="package" nillable="true" type="q12:PackageForCashiering" />
+        <xs:element minOccurs="0" name="wasRecordedBefore" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrepareAndSendDocumentToCashieringForCalculate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="document" nillable="true" type="q13:DocumentForCashiering" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrepareAndSendDocumentToCashieringForCalculateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="document" nillable="true" type="q14:DocumentForCashiering" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDummyLabelsFromCornerStone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cashIdCustomer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secureSubmitterId" type="xs:int" />
+        <xs:element minOccurs="0" name="cashIdUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cashWorkstationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bIs8AM" type="xs:boolean" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="document" nillable="true" type="q15:DocumentForCashiering" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDummyLabelsFromCornerStoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="document" nillable="true" type="q16:DocumentForCashiering" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginToCornerStone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="csUserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="csPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginToCornerStoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginToCornerStoneResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="csUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyInfoFromCashiering">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyInfoFromCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="GetCompanyInfoFromCashieringResult" nillable="true" type="q17:ArrayOfCashierCompanyInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMetroCustomersInfoFromCashiering">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMetroCustomersInfoFromCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="GetMetroCustomersInfoFromCashieringResult" nillable="true" type="q18:ArrayOfCashierCompanyInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoFromCashiering">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoFromCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="GetUserInfoFromCashieringResult" nillable="true" type="q19:ArrayOfCashierUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkstationInfoFromCashiering">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkstationInfoFromCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="GetWorkstationInfoFromCashieringResult" nillable="true" type="q20:ArrayOfCashierWorkstationInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTitleInfoFromCashiering">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTitleInfoFromCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="GetTitleInfoFromCashieringResult" nillable="true" type="q21:ArrayOfCashierTitleInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLabelInfoFromCashiering">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLabelInfoFromCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="GetLabelInfoFromCashieringResult" nillable="true" type="q22:ArrayOfCashierLabelInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCityInfoFromCashiering">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCityInfoFromCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="GetCityInfoFromCashieringResult" nillable="true" type="q23:ArrayOfCashierCityInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentTypesFromCashiering">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentTypesFromCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="GetPaymentTypesFromCashieringResult" nillable="true" type="q24:ArrayOfCashierPaymentType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTitleLabelsFromCashiering">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTitleLabelsFromCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="GetTitleLabelsFromCashieringResult" nillable="true" type="q25:ArrayOfCashierTitleLabelInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCompanyToCashiering">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="company" nillable="true" type="q26:CashierCompanyInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCompanyToCashieringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" minOccurs="0" name="company" nillable="true" type="q27:CashierCompanyInfo" />
+        <xs:element minOccurs="0" name="strError" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

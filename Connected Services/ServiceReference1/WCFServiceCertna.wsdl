@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WCFServiceCertna" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.10.2.137/CSRest/WCFServiceCertna.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.10.2.137/CSRest/WCFServiceCertna.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.10.2.137/CSRest/WCFServiceCertna.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/STS.CashierBusinessEntities" />
+      <xsd:import schemaLocation="http://10.10.2.137/CSRest/WCFServiceCertna.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWCFServiceCertna_BlockDocumentIdsInCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:BlockDocumentIdsInCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_BlockDocumentIdsInCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BlockDocumentIdsInCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_BlockDocumentIdsInCashieringForMetro_InputMessage">
+    <wsdl:part name="parameters" element="tns:BlockDocumentIdsInCashieringForMetro" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_BlockDocumentIdsInCashieringForMetro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BlockDocumentIdsInCashieringForMetroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_PrepareAndSendPackageToCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareAndSendPackageToCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_PrepareAndSendPackageToCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareAndSendPackageToCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_PrepareAndSendMetroPackageToCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareAndSendMetroPackageToCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_PrepareAndSendMetroPackageToCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareAndSendMetroPackageToCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_PrepareAndSendVitalDocsPackageToCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareAndSendVitalDocsPackageToCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_PrepareAndSendVitalDocsPackageToCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareAndSendVitalDocsPackageToCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_PrepareAndSendDocumentToCashieringForCalculate_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareAndSendDocumentToCashieringForCalculate" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_PrepareAndSendDocumentToCashieringForCalculate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareAndSendDocumentToCashieringForCalculateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetDummyLabelsFromCornerStone_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDummyLabelsFromCornerStone" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetDummyLabelsFromCornerStone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDummyLabelsFromCornerStoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_LoginToCornerStone_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginToCornerStone" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_LoginToCornerStone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginToCornerStoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetCompanyInfoFromCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyInfoFromCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetCompanyInfoFromCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyInfoFromCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetMetroCustomersInfoFromCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetroCustomersInfoFromCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetMetroCustomersInfoFromCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetroCustomersInfoFromCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetUserInfoFromCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoFromCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetUserInfoFromCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoFromCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetWorkstationInfoFromCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkstationInfoFromCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetWorkstationInfoFromCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkstationInfoFromCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetTitleInfoFromCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleInfoFromCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetTitleInfoFromCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleInfoFromCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetLabelInfoFromCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabelInfoFromCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetLabelInfoFromCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabelInfoFromCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetCityInfoFromCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityInfoFromCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetCityInfoFromCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityInfoFromCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetPaymentTypesFromCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentTypesFromCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetPaymentTypesFromCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentTypesFromCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetTitleLabelsFromCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleLabelsFromCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_GetTitleLabelsFromCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleLabelsFromCashieringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_AddCompanyToCashiering_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyToCashiering" />
+  </wsdl:message>
+  <wsdl:message name="IWCFServiceCertna_AddCompanyToCashiering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyToCashieringResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWCFServiceCertna">
+    <wsdl:operation name="BlockDocumentIdsInCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/BlockDocumentIdsInCashiering" message="tns:IWCFServiceCertna_BlockDocumentIdsInCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/BlockDocumentIdsInCashieringResponse" message="tns:IWCFServiceCertna_BlockDocumentIdsInCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BlockDocumentIdsInCashieringForMetro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/BlockDocumentIdsInCashieringForMetro" message="tns:IWCFServiceCertna_BlockDocumentIdsInCashieringForMetro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/BlockDocumentIdsInCashieringForMetroResponse" message="tns:IWCFServiceCertna_BlockDocumentIdsInCashieringForMetro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAndSendPackageToCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/PrepareAndSendPackageToCashiering" message="tns:IWCFServiceCertna_PrepareAndSendPackageToCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/PrepareAndSendPackageToCashieringResponse" message="tns:IWCFServiceCertna_PrepareAndSendPackageToCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAndSendMetroPackageToCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/PrepareAndSendMetroPackageToCashiering" message="tns:IWCFServiceCertna_PrepareAndSendMetroPackageToCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/PrepareAndSendMetroPackageToCashieringResponse" message="tns:IWCFServiceCertna_PrepareAndSendMetroPackageToCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAndSendVitalDocsPackageToCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/PrepareAndSendVitalDocsPackageToCashiering" message="tns:IWCFServiceCertna_PrepareAndSendVitalDocsPackageToCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/PrepareAndSendVitalDocsPackageToCashieringResponse" message="tns:IWCFServiceCertna_PrepareAndSendVitalDocsPackageToCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAndSendDocumentToCashieringForCalculate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/PrepareAndSendDocumentToCashieringForCalculate" message="tns:IWCFServiceCertna_PrepareAndSendDocumentToCashieringForCalculate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/PrepareAndSendDocumentToCashieringForCalculateResponse" message="tns:IWCFServiceCertna_PrepareAndSendDocumentToCashieringForCalculate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDummyLabelsFromCornerStone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetDummyLabelsFromCornerStone" message="tns:IWCFServiceCertna_GetDummyLabelsFromCornerStone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetDummyLabelsFromCornerStoneResponse" message="tns:IWCFServiceCertna_GetDummyLabelsFromCornerStone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginToCornerStone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/LoginToCornerStone" message="tns:IWCFServiceCertna_LoginToCornerStone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/LoginToCornerStoneResponse" message="tns:IWCFServiceCertna_LoginToCornerStone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyInfoFromCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetCompanyInfoFromCashiering" message="tns:IWCFServiceCertna_GetCompanyInfoFromCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetCompanyInfoFromCashieringResponse" message="tns:IWCFServiceCertna_GetCompanyInfoFromCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetroCustomersInfoFromCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetMetroCustomersInfoFromCashiering" message="tns:IWCFServiceCertna_GetMetroCustomersInfoFromCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetMetroCustomersInfoFromCashieringResponse" message="tns:IWCFServiceCertna_GetMetroCustomersInfoFromCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoFromCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetUserInfoFromCashiering" message="tns:IWCFServiceCertna_GetUserInfoFromCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetUserInfoFromCashieringResponse" message="tns:IWCFServiceCertna_GetUserInfoFromCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkstationInfoFromCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetWorkstationInfoFromCashiering" message="tns:IWCFServiceCertna_GetWorkstationInfoFromCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetWorkstationInfoFromCashieringResponse" message="tns:IWCFServiceCertna_GetWorkstationInfoFromCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleInfoFromCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetTitleInfoFromCashiering" message="tns:IWCFServiceCertna_GetTitleInfoFromCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetTitleInfoFromCashieringResponse" message="tns:IWCFServiceCertna_GetTitleInfoFromCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelInfoFromCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetLabelInfoFromCashiering" message="tns:IWCFServiceCertna_GetLabelInfoFromCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetLabelInfoFromCashieringResponse" message="tns:IWCFServiceCertna_GetLabelInfoFromCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityInfoFromCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetCityInfoFromCashiering" message="tns:IWCFServiceCertna_GetCityInfoFromCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetCityInfoFromCashieringResponse" message="tns:IWCFServiceCertna_GetCityInfoFromCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentTypesFromCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetPaymentTypesFromCashiering" message="tns:IWCFServiceCertna_GetPaymentTypesFromCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetPaymentTypesFromCashieringResponse" message="tns:IWCFServiceCertna_GetPaymentTypesFromCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleLabelsFromCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetTitleLabelsFromCashiering" message="tns:IWCFServiceCertna_GetTitleLabelsFromCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/GetTitleLabelsFromCashieringResponse" message="tns:IWCFServiceCertna_GetTitleLabelsFromCashiering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyToCashiering">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFServiceCertna/AddCompanyToCashiering" message="tns:IWCFServiceCertna_AddCompanyToCashiering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFServiceCertna/AddCompanyToCashieringResponse" message="tns:IWCFServiceCertna_AddCompanyToCashiering_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWCFServiceCertna" type="tns:IWCFServiceCertna">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BlockDocumentIdsInCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/BlockDocumentIdsInCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlockDocumentIdsInCashieringForMetro">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/BlockDocumentIdsInCashieringForMetro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAndSendPackageToCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/PrepareAndSendPackageToCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAndSendMetroPackageToCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/PrepareAndSendMetroPackageToCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAndSendVitalDocsPackageToCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/PrepareAndSendVitalDocsPackageToCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAndSendDocumentToCashieringForCalculate">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/PrepareAndSendDocumentToCashieringForCalculate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDummyLabelsFromCornerStone">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/GetDummyLabelsFromCornerStone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginToCornerStone">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/LoginToCornerStone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyInfoFromCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/GetCompanyInfoFromCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetroCustomersInfoFromCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/GetMetroCustomersInfoFromCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoFromCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/GetUserInfoFromCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkstationInfoFromCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/GetWorkstationInfoFromCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleInfoFromCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/GetTitleInfoFromCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelInfoFromCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/GetLabelInfoFromCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityInfoFromCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/GetCityInfoFromCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentTypesFromCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/GetPaymentTypesFromCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleLabelsFromCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/GetTitleLabelsFromCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyToCashiering">
+      <soap:operation soapAction="http://tempuri.org/IWCFServiceCertna/AddCompanyToCashiering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WCFServiceCertna">
+    <wsdl:port name="BasicHttpBinding_IWCFServiceCertna" binding="tns:BasicHttpBinding_IWCFServiceCertna">
+      <soap:address location="http://10.10.2.137/CSRest/WCFServiceCertna.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
